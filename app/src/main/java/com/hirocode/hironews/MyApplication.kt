@@ -4,6 +4,7 @@ import android.app.Application
 import com.hirocode.hironews.di.networkModule
 import com.hirocode.hironews.di.repositoryModule
 import com.hirocode.hironews.di.useCaseModule
+import com.hirocode.hironews.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -20,6 +21,7 @@ class MyApplication : Application() {
                     networkModule,
                     repositoryModule,
                     useCaseModule,
+                    viewModelModule,
                 )
             )
         }
