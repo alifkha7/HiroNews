@@ -11,4 +11,12 @@ interface ApiService {
         @Query("country") sources: String = "id",
         @Query("apiKey") apiKey: String = API_KEY
     ): NewsResponse
+
+    @GET("everything")
+    suspend fun getEverything(
+        @Query("q") query: String = "Indonesia",
+        @Query("sortBy") sortBy: String = "publishedAt",
+        @Query("page") page: Int = 1,
+        @Query("apiKey") apiKey: String = API_KEY
+    ): NewsResponse
 }
