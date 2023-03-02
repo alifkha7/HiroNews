@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.hirocode.hironews.R
 import com.hirocode.hironews.domain.model.Article
+import com.hirocode.hironews.utils.convertTo
 
 @Composable
 fun TopHeadlinesItem(
@@ -51,7 +52,7 @@ fun TopHeadlinesItem(
                     )
                 )
                 Text(
-                    text = article.publishedAt,
+                    text = article.publishedAt.convertTo("dd MMM, yyyy"),
                     style = MaterialTheme.typography.caption,
                 )
             }
